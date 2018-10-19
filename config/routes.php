@@ -46,6 +46,16 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
+/* These are the custom routing codes */
+
+Router::connect('/',['controller'=>'Test', 'action' => 'index']);
+
+Router::connect('/contact-us',['controller'=>'Online', 'action' => 'index']);
+
+//Router::connect('/contact-us/:param1/:param2',['controller'=>'Online', 'action' => 'index'],['pass'=>"param1","param2"]);
+
+
+
 Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',

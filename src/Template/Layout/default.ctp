@@ -14,16 +14,41 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
+
+//custom template title just for learning purpose
+$cakeDescriptionTitle = "E-Commerce Website Using Cakephp";
+
+
+
 ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+    <!-- <title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
-    </title>
+    </title> -->
+
+
+
+<!-- Custom template for the title Start-->
+
+<title>
+    <?= $cakeDescriptionTitle ?>
+    <?= $this->fetch('title'); ?>
+</title>
+
+<!-- Custom template for the title END-->
+
+
+
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>
